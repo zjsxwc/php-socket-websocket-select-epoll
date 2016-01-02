@@ -9,7 +9,7 @@ class EpollSocketServer{
 	private static $buffers;
 	private static $users=array();
 
-	function EpollSocketServer ($port){
+	function __construct($port){
 		global $errno, $errstr;
 		if (!extension_loaded('libevent')) {
 			die("Please install libevent extension firstly/n");
